@@ -1,7 +1,6 @@
 using AElf.Playground.Localization;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Localization;
-using Volo.Abp.MultiTenancy;
 
 namespace AElf.Playground.Permissions;
 

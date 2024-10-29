@@ -5,7 +5,6 @@ using Volo.Abp.Identity;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Modularity;
-using Volo.Abp.TenantManagement;
 
 namespace AElf.Playground;
 
@@ -16,7 +15,6 @@ namespace AElf.Playground;
     typeof(AbpFeatureManagementApplicationModule),
     typeof(AbpIdentityApplicationModule),
     typeof(AbpAccountApplicationModule),
-    typeof(AbpTenantManagementApplicationModule),
     typeof(AbpSettingManagementApplicationModule)
     )]
 public class PlaygroundApplicationModule : AbpModule

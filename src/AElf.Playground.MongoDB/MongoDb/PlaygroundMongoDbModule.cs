@@ -9,7 +9,6 @@ using Volo.Abp.PermissionManagement.MongoDB;
 using Volo.Abp.SettingManagement.MongoDB;
 using Volo.Abp.BlobStoring.Database.MongoDB;
 using Volo.Abp.Uow;
-using Volo.Abp.TenantManagement.MongoDB;
 
 namespace AElf.Playground.MongoDB;
 
@@ -22,7 +21,6 @@ namespace AElf.Playground.MongoDB;
     typeof(AbpFeatureManagementMongoDbModule),
     typeof(AbpIdentityMongoDbModule),
     typeof(AbpOpenIddictMongoDbModule),
-    typeof(AbpTenantManagementMongoDbModule),
     typeof(BlobStoringDatabaseMongoDbModule)
 )]
 public class PlaygroundMongoDbModule : AbpModule
