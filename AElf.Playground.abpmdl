@@ -1,0 +1,85 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.Account": {
+      "version": "8.3.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "8.3.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "8.3.1",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "8.3.1",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "AElf.Playground.Application": {
+      "path": "src/AElf.Playground.Application/AElf.Playground.Application.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.Application.Tests": {
+      "path": "test/AElf.Playground.Application.Tests/AElf.Playground.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "AElf.Playground.MongoDB": {
+      "path": "src/AElf.Playground.MongoDB/AElf.Playground.MongoDB.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.MongoDB.Tests": {
+      "path": "test/AElf.Playground.MongoDB.Tests/AElf.Playground.MongoDB.Tests.abppkg",
+      "folder": "test"
+    },
+    "AElf.Playground.Domain.Shared": {
+      "path": "src/AElf.Playground.Domain.Shared/AElf.Playground.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.Application.Contracts": {
+      "path": "src/AElf.Playground.Application.Contracts/AElf.Playground.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.HttpApi": {
+      "path": "src/AElf.Playground.HttpApi/AElf.Playground.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.HttpApi.Client": {
+      "path": "src/AElf.Playground.HttpApi.Client/AElf.Playground.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.TestBase": {
+      "path": "test/AElf.Playground.TestBase/AElf.Playground.TestBase.abppkg",
+      "folder": "test"
+    },
+    "AElf.Playground.Domain.Tests": {
+      "path": "test/AElf.Playground.Domain.Tests/AElf.Playground.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "AElf.Playground.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/AElf.Playground.HttpApi.Client.ConsoleTestApp/AElf.Playground.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "AElf.Playground.DbMigrator": {
+      "path": "src/AElf.Playground.DbMigrator/AElf.Playground.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.HttpApi.Host": {
+      "path": "src/AElf.Playground.HttpApi.Host/AElf.Playground.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "AElf.Playground.Domain": {
+      "path": "src/AElf.Playground.Domain/AElf.Playground.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

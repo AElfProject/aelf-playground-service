@@ -1,0 +1,13 @@
+﻿{
+  "applications": {
+    "AElf.Playground.HttpApi.Host": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44301",
+      "path": "../../../src/AElf.Playground.HttpApi.Host/AElf.Playground.HttpApi.Host.csproj",
+      "kubernetesService": ".*-httpapihost$",
+      "execution": {
+        "order": 4
+      }
+    }
+  }
+}
