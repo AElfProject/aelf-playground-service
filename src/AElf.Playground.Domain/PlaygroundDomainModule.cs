@@ -82,7 +82,7 @@ public class PlaygroundDomainModule : AbpModule
                 {
                     // https://stackoverflow.com/a/70843145
                     Aws.AccessKeyId = configuration.GetSection("Aws:AccessKeyId").Value;
-                    Aws.SecretAccessKey = configuration.GetSection("Aws:Secret").Value;
+                    Aws.SecretAccessKey = configuration.GetSection("Aws:SecretAccessKey").Value;
                     Aws.UseCredentials = configuration.GetSection("Aws:UseCredentials").Get<bool>();
                     Aws.UseTemporaryCredentials = configuration.GetSection("Aws:UseTemporaryCredentials").Get<bool>();
                     Aws.UseTemporaryFederatedCredentials = configuration.GetSection("Aws:UseTemporaryFederatedCredentials").Get<bool>();
