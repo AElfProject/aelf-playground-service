@@ -36,6 +36,7 @@ using Volo.Abp.OpenIddict;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.Studio.Client.AspNetCore;
 using Volo.Abp.Security.Claims;
+using Volo.Abp.EventBus.Distributed;
 
 namespace AElf.Playground;
 
@@ -108,6 +109,14 @@ public class PlaygroundHttpApiHostModule : AbpModule
         ConfigureSwagger(context, configuration);
         ConfigureVirtualFileSystem(context);
         ConfigureCors(context, configuration);
+
+        Configure<AbpDistributedEventBusOptions>(options =>
+        {
+            options.Inboxes.Configure(config =>
+            {
+                config.IsProcessingEnabled = false;
+            });
+        });
     }
 
     private void ConfigureAuthentication(ServiceConfigurationContext context)
