@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Volo.Abp;
 using Volo.Abp.Application.Services;
 
 namespace AElf.Playground.Jobs
@@ -22,7 +23,7 @@ namespace AElf.Playground.Jobs
             }
             else
             {
-                throw new Exception($"Unknown command {command}.");
+                throw new UserFriendlyException($"Unknown command {command}.");
             }
 
 
