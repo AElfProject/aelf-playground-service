@@ -13,13 +13,11 @@ using Microsoft.AspNetCore.Extensions.DependencyInjection;
 using OpenIddict.Validation.AspNetCore;
 using OpenIddict.Server.AspNetCore;
 using AElf.Playground.MongoDB;
-using AElf.Playground.MultiTenancy;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
 using Volo.Abp.Studio;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
-using Volo.Abp.AspNetCore.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Autofac;
 using Volo.Abp.Localization;
@@ -46,7 +44,6 @@ namespace AElf.Playground;
     typeof(AbpStudioClientAspNetCoreModule),
     typeof(AbpAspNetCoreMvcUiBasicThemeModule),
     typeof(AbpAutofacModule),
-    typeof(AbpAspNetCoreMultiTenancyModule),
     typeof(PlaygroundApplicationModule),
     typeof(PlaygroundMongoDbModule),
     typeof(AbpAccountWebOpenIddictModule),
@@ -223,7 +220,7 @@ public class PlaygroundHttpApiHostModule : AbpModule
         {
             app.UseErrorPage();
         }
-        
+
         app.UseStaticFiles();
         app.UseAbpStudioLink();
         app.UseRouting();
@@ -231,11 +228,6 @@ public class PlaygroundHttpApiHostModule : AbpModule
         app.UseCors();
         app.UseAuthentication();
         app.UseAbpOpenIddictValidation();
-
-        if (MultiTenancyConsts.IsEnabled)
-        {
-            app.UseMultiTenancy();
-        }
 
         app.UseUnitOfWork();
         app.UseDynamicClaims();

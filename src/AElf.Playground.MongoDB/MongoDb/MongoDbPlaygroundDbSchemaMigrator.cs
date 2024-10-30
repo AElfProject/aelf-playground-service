@@ -8,7 +8,6 @@ using AElf.Playground.Data;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.MongoDB;
-using Volo.Abp.MultiTenancy;
 using Volo.Abp.Reflection;
 
 namespace AElf.Playground.MongoDB;
@@ -26,11 +25,6 @@ public class MongoDbPlaygroundDbSchemaMigrator : IPlaygroundDbSchemaMigrator, IT
     {
         var dbContexts = _serviceProvider.GetServices<IAbpMongoDbContext>();
         var connectionStringResolver = _serviceProvider.GetRequiredService<IConnectionStringResolver>();
-
-        if (_serviceProvider.GetRequiredService<ICurrentTenant>().IsAvailable)
-        {
-            dbContexts = dbContexts.Where(x => !x.GetType().IsDefined(typeof(IgnoreMultiTenancyAttribute)));
-        }
 
         foreach (var dbContext in dbContexts)
         {

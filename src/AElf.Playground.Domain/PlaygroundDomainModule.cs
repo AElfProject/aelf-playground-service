@@ -1,10 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using AElf.Playground.Localization;
-using AElf.Playground.MultiTenancy;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.MultiTenancy;
 using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.BlobStoring.Database;
@@ -16,7 +14,6 @@ using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Emailing;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
-using Volo.Abp.TenantManagement;
 using Volo.Abp.AspNetCore.Mvc.Dapr.EventBus;
 using Volo.Abp.BlobStoring.Aws;
 using Volo.Abp.BlobStoring;
@@ -36,7 +33,6 @@ namespace AElf.Playground;
     typeof(AbpEmailingModule),
     typeof(AbpIdentityDomainModule),
     typeof(AbpOpenIddictDomainModule),
-    typeof(AbpTenantManagementDomainModule),
     typeof(BlobStoringDatabaseDomainModule)
     )]
 [DependsOn(typeof(AbpAspNetCoreMvcDaprEventBusModule))]
@@ -45,10 +41,6 @@ public class PlaygroundDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        Configure<AbpMultiTenancyOptions>(options =>
-        {
-            options.IsEnabled = MultiTenancyConsts.IsEnabled;
-        });
 
         Configure<AbpLocalizationOptions>(options =>
         {
